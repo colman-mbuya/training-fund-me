@@ -6,7 +6,7 @@ DEPLOY_SCRIPT=script/DeploySimpleStorage.s.sol
 ### Environment Setup
 .PHONY: install-dependencies
 install-dependencies:
-	forge install pyth-network/pyth-sdk-solidity@v2.2.0
+	forge install pyth-network/pyth-sdk-solidity@v2.2.0 && forge install foundry-rs/forge-std@v1.5.3
 
 ### FORGE COMMANDS
 

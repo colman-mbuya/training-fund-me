@@ -14,7 +14,7 @@ contract FundMeTest is StdCheats, Test {
     uint256 public constant SEND_VALUE = 0.1 ether;
     uint256 public constant TINY_AMOUNT = 0.001 ether;
     uint256 public constant STARTING_PRANKED_USER_BALANCE = 10 ether;
-    address public constant PRANKED_USER = address(1); //Todo look into how this works, but I assume this only applies when we are working with an anvil chain
+    address public constant PRANKED_USER = address(1);
 
     modifier funded() {
         vm.prank(PRANKED_USER);

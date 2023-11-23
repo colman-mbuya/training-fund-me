@@ -1,7 +1,7 @@
 include .env
 export
 
-DEPLOY_SCRIPT=script/DeploySimpleStorage.s.sol
+DEPLOY_SCRIPT=script/DeployFundMe.s.sol
 
 ### Environment Setup
 .PHONY: install-dependencies
@@ -16,7 +16,7 @@ compile:
 
 .PHONY: local-deploy
 local-deploy:
-	forge script $(DEPLOY_SCRIPT) --rpc-url $(LOCAL_RPC_URL) --private-key $(PRIVATE_KEY) --broadcast
+	forge script $(DEPLOY_SCRIPT) --rpc-url $(LOCAL_RPC_URL) --private-key $(PRIVATE_KEY) --broadcast -vvvv
 
 .PHONY: sepolia-deploy
 sepolia-deploy:
@@ -24,6 +24,6 @@ sepolia-deploy:
 
 ### Tests
 
-# .PHONY: run-tests
-# run-tests:
-# 	TBC
+.PHONY: run-unit-tests
+run-unit-tests:
+	forge test -vv

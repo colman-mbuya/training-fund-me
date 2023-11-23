@@ -16,6 +16,7 @@ library PriceConverter {
 
     function getConversionRate(uint256 ethAmount, IPyth priceFeed, bytes32 priceId) internal view returns (uint256) {
         uint256 ethPrice = getPrice(priceFeed, priceId);
+        console.log("ETH Price from Pyth: %d", ethPrice);
         uint256 ethAmountInUsd = ( ethPrice * ethAmount ) / 1e36;
         return ethAmountInUsd;
     }

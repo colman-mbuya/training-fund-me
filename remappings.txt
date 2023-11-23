@@ -1,1 +1,2 @@
 pyth-sdk-solidity/=lib/pyth-sdk-solidity/
+foundry-devops/=lib/foundry-devops/
